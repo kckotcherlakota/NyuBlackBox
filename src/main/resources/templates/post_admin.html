@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>logins</title>
+    <link rel="stylesheet" href="assets/ua_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/ua_assets/css/Login-Form-Basic-icons.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2>NYU Black-Box</h2>
+                    <p class="w-lg-50">Anonymus Complain Registration Platform&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p class="w-lg-50">Admin Status Update&nbsp;</p>
+        </div>
+        <div class="col-md-4"><div>
+
+
+            <form action="#"
+                  th:action="@{'/posts/{id}'(id=${post.id})}"
+                  th:object="${post}"
+                  method="post">
+                <input type="hidden" th:field="*{account}" />
+                <input type="hidden" th:field="*{createdAt}" />
+                <h2>Update Admin Status</h2>
+                <div>
+
+                    <input id="new-post-title" type="hidden" th:field="*{title}" placeholder="Title"/>
+                </div>
+                <div>
+                    <input id="new-post-body" type="hidden" th:field="*{body}"/>
+                </div>
+
+                <div>
+                <input id="new-post-title"  type="hidden" th:field="*{department}" />
+                </div>
+
+                <div><input id="new-post-title"  type="hidden" th:field="*{userUpdate}" /></div>
+                <div>
+                    <label for="new-post-title">Admin Update </label>
+                    <input id="new-post-title" type="text" th:field="*{adminUpdate}" />
+                </div>
+
+                <button type="submit">Update Complaint</button>
+            </form>
+
+        </div></div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+<script src="assets/ua_assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
